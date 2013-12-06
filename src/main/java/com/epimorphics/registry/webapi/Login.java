@@ -293,7 +293,7 @@ public class Login {
         }
         log.info("Authentication request for " + provider + (isRegister ? " (registration)" : ""));
 
-        String responseURL = uriInfo.getBaseUri().toString() + "system/security/response";
+        String responseURL = uriInfo.getRequestUri().toString() + "system/security/response";
         try
         {
             // perform discovery on the user-supplied identifier
